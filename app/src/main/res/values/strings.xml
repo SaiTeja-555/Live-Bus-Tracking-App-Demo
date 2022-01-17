@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <string name="back4app_app_id">TCHXBh26cKQeipZ1lgFwmhu4pztrE4PBHGQAMcps</string>
+    <string name="back4app_client_key">INrZGeBBHdjdomAIIDyZ12z37qJMNmnZ3voSCYhC</string>
+    <string name="role_admin">admin</string>
+</resources>
