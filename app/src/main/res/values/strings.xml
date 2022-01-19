@@ -4,15 +4,23 @@
     <string name="back4app_app_id">TCHXBh26cKQeipZ1lgFwmhu4pztrE4PBHGQAMcps</string>
     <string name="back4app_client_key">INrZGeBBHdjdomAIIDyZ12z37qJMNmnZ3voSCYhC</string>
     <string name="role_admin">admin</string>
-    <string name="userName">USERNAME</string>
+    <string name="userName">User Name</string>
     <string name="begin">Begin your Journey with..</string>
-    <string name="name">travels</string>
+    <string name="nname">travels</string>
+    <string name="contn">continue</string>
     <string name="password">Password</string>
     <string name="rememberme">Remember me</string>
     <string name="forgot">forgot password ?</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="confirmpassword">Confirm Password</string>
+    <string name="createaccount">Create Account</string>
     <string name="signin">Sign up</string>
     <string name="login">Log in</string>
-    <string name="or">- - - - - - -  -  -  -  -  -  -  or  -  -  -  -  -  -  -  - - - - - -</string>
+    <string name="joinus">Join us,</string>
+    <string name="letsride">Let\'s go,</string>
+    <string name="or">or</string>
+    <string name="terms">I have read all the terms and conditions</string>
 
 
 </resources>
