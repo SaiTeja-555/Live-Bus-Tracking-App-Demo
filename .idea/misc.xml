@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/layout/activity_register_or_login.xml" value="0.264" />
+        <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/drawable/buslogo.xml" value="0.1" />
+        <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/drawable/button.xml" value="0.2490740740740741" />
+        <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/drawable/coordinatorlayout.xml" value="0.1" />
+        <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/drawable/curved_button.xml" value="0.2490740740740741" />
+        <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/drawable/roundedge.xml" value="0.290625" />
+        <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/layout/activity_create_account.xml" value="0.25" />
+        <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/layout/activity_register_or_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_register_or_login.xml" value="0.33" />
       </map>
@@ -14,5 +21,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>

@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +29,7 @@ public class RegisterOrLoginActivity extends AppCompatActivity implements View.O
     TextView swapSubmitTextView;
     Button submitButton;
     EditText passwordEditText;
-    ConstraintLayout backgroundConstraintLayout;
+    ScrollView backgroundConstraintLayout;
     Switch aSwitch;
 
     public void authenticated() {
@@ -86,7 +87,7 @@ public class RegisterOrLoginActivity extends AppCompatActivity implements View.O
         submitButton = (Button) findViewById(R.id.submitButton);
         aSwitch = (Switch) findViewById(R.id.roleSwitch);
         passwordEditText = (EditText) findViewById(R.id.passwordEditText);
-        backgroundConstraintLayout = (ConstraintLayout) findViewById(R.id.backgroundConstraintLayout);
+        backgroundConstraintLayout = (ScrollView) findViewById(R.id.backgroundConstraintLayout);
         swapSubmitTextView.setOnClickListener(this);
         backgroundConstraintLayout.setOnClickListener(this);
         passwordEditText.setOnKeyListener(this);
@@ -94,9 +95,12 @@ public class RegisterOrLoginActivity extends AppCompatActivity implements View.O
 //        ParseInstallation.getCurrentInstallation().saveInBackground();
 
     }
+    public void signup(View view){
+        Intent intent = new Intent(getApplicationContext(),CreateAccount.class);
+        startActivity(intent);
+    }
 
-
-    @Override
+    /*@Override
     public void onClick(View view) {
         if(view.getId() == R.id.swapSubmitTextView) {
 
@@ -120,7 +124,7 @@ public class RegisterOrLoginActivity extends AppCompatActivity implements View.O
         }
 
 
-    }
+    }*/
 
     @Override
     public boolean onKey(View view, int i, KeyEvent keyEvent) {
@@ -129,5 +133,12 @@ public class RegisterOrLoginActivity extends AppCompatActivity implements View.O
 //            background
         }
         return false;
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(getApplicationContext(),CreateAccount.class);
+        startActivity(intent);
+
     }
 }
