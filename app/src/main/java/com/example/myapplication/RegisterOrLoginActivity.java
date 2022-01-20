@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
@@ -30,7 +31,7 @@ public class RegisterOrLoginActivity extends AppCompatActivity implements View.O
     Button submitButton;
     EditText passwordEditText;
     ScrollView backgroundConstraintLayout;
-    Switch aSwitch;
+    SwitchCompat aSwitch;
 
     public void authenticated() {
         startActivity(new Intent(RegisterOrLoginActivity.this, MainActivity.class));
@@ -85,7 +86,7 @@ public class RegisterOrLoginActivity extends AppCompatActivity implements View.O
         System.out.println("register");
         swapSubmitTextView = (TextView) findViewById(R.id.swapSubmitTextView);
         submitButton = (Button) findViewById(R.id.submitButton);
-        aSwitch = (Switch) findViewById(R.id.roleSwitch);
+        aSwitch = (SwitchCompat) findViewById(R.id.roleSwitch);
         passwordEditText = (EditText) findViewById(R.id.passwordEditText);
         backgroundConstraintLayout = (ScrollView) findViewById(R.id.backgroundConstraintLayout);
         swapSubmitTextView.setOnClickListener(this);

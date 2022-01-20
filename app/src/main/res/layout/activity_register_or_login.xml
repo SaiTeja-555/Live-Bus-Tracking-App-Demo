@@ -8,7 +8,7 @@
     tools:context=".RegisterOrLoginActivity"
     android:fillViewport="true"
     android:background="@color/white"
-    android:padding="30dp">
+    android:padding="20dp">
 
     <LinearLayout
         android:background="@color/white"
@@ -33,7 +33,7 @@
             android:fontFamily="@font/sunshiney"
             android:text="@string/letsride"
             android:textColor="#B60C09"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
 
 
         <RelativeLayout
@@ -43,13 +43,14 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/image_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:text="@string/login"
                 android:textColor="@color/black"
-                android:textSize="70dp"
-                app:fontFamily="@font/annie_use_your_telescope"
+                android:textSize="50sp"
+                app:fontFamily="serif-monospace"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints" />
@@ -61,7 +62,6 @@
 
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="20dp"
                 android:layout_marginEnd="6dp"
                 android:background="@drawable/buslogo"
                 app:srcCompat="@drawable/ic_baseline_directions_bus_24" />
@@ -87,10 +87,10 @@
                 android:id="@+id/usernameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/cairo_semibold"
                 android:inputType="text"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -99,11 +99,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
-            android:textColorHint="@color/black"
+            android:textColorHint="#494949"
             app:boxStrokeColor="@color/black"
             app:boxStrokeWidth="2dp"
             app:boxStrokeWidthFocused="1dp"
             app:endIconMode="password_toggle"
+            app:endIconCheckable="true"
             app:endIconTint="@color/black"
             app:startIconDrawable="@drawable/password"
             app:startIconTint="@color/black">
@@ -115,7 +116,7 @@
                 android:fontFamily="@font/cairo_semibold"
                 android:inputType="textPassword"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <RelativeLayout
@@ -133,6 +134,7 @@
                 android:layout_centerVertical="true"
                 android:buttonTint="@color/black"
                 android:text="@string/rememberme"
+                android:textSize="10sp"
                 android:textColor="@color/black" />
 
             <Button
@@ -142,11 +144,10 @@
                 android:layout_alignParentEnd="true"
                 android:background="@color/white"
                 android:paddingStart="12dp"
-
-
                 android:text="@string/forgot"
                 android:textAllCaps="false"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="10sp" />
         </RelativeLayout>
 
 
@@ -187,7 +188,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Switch
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/roleSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
