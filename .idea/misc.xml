@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.15989583333333332" />
+=======
+>>>>>>> 1a0a63f0aeb8581b95e30c947be6e1da782543d7
         <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/drawable/buslogo.xml" value="0.1" />
         <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/drawable/button.xml" value="0.2490740740740741" />
         <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/drawable/coordinatorlayout.xml" value="0.1" />
         <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/drawable/curved_button.xml" value="0.2490740740740741" />
+<<<<<<< HEAD
         <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.15989583333333332" />
         <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.15989583333333332" />
         <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.15989583333333332" />
@@ -25,6 +29,12 @@
         <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/layout/fragment_second.xml" value="0.14375" />
         <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/menu/bottom_nav_menu.xml" value="0.14375" />
         <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
+=======
+        <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/drawable/roundedge.xml" value="0.290625" />
+        <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/layout/activity_create_account.xml" value="0.25" />
+        <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/aruna/AndroidStudioProjects/sss/Android-App/app/src/main/res/layout/activity_register_or_login.xml" value="0.1" />
+>>>>>>> 1a0a63f0aeb8581b95e30c947be6e1da782543d7
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_register_or_login.xml" value="0.33" />
       </map>

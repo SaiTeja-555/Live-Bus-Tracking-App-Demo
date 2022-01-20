@@ -21,6 +21,7 @@
     <string name="letsride">Let\'s go,</string>
     <string name="or">or</string>
     <string name="terms">I have read all the terms and conditions</string>
+
     <string name="title_activity_dashboard">DashboardActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -34,6 +35,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
 
 
 </resources>

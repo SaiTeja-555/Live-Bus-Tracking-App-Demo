@@ -8,7 +8,9 @@
     tools:context=".RegisterOrLoginActivity"
     android:fillViewport="true"
     android:background="@color/white"
+
     android:padding="20dp">
+
 
     <LinearLayout
         android:background="@color/white"
@@ -34,21 +36,21 @@
             android:text="@string/letsride"
             android:textColor="#B60C09"
             android:textSize="30sp" />
-
-
-        <RelativeLayout
+ <RelativeLayout
             android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
+
                 android:id="@+id/image_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:text="@string/login"
                 android:textColor="@color/black"
+
                 android:textSize="50sp"
                 app:fontFamily="serif-monospace"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -91,6 +93,7 @@
                 android:inputType="text"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -117,7 +120,7 @@
                 android:inputType="textPassword"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
-        </com.google.android.material.textfield.TextInputLayout>
+ </com.google.android.material.textfield.TextInputLayout>
 
         <RelativeLayout
             android:id="@+id/checkBoxRelativeLayout"
@@ -135,6 +138,7 @@
                 android:buttonTint="@color/black"
                 android:text="@string/rememberme"
                 android:textSize="10sp"
+
                 android:textColor="@color/black" />
 
             <Button
@@ -148,6 +152,10 @@
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="10sp" />
+
+
+
+
         </RelativeLayout>
 
 
@@ -189,6 +197,7 @@
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.SwitchCompat
+
                 android:id="@+id/roleSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

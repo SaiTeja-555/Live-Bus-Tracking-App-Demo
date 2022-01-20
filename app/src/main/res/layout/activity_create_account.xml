@@ -7,18 +7,14 @@
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:background="@drawable/coordinatorlayout"
-    tools:context=".CreateAccount"
+    tools:context=".CreateAccount">
 
 
-
-    >
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:theme="@style/Theme.MyApplication"
-
-        >
+        android:theme="@style/Theme.MyApplication">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
@@ -27,6 +23,7 @@
             app:contentScrim="@color/black"
             app:title="@string/joinus"
             app:expandedTitleTextColor="@color/blue"
+
             app:collapsedTitleTextColor="@color/red"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
             android:background="@drawable/highway">
