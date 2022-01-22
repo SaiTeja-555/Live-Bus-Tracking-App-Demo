@@ -4,4 +4,5 @@
     <string name="back4app_app_id">TCHXBh26cKQeipZ1lgFwmhu4pztrE4PBHGQAMcps</string>
     <string name="back4app_client_key">INrZGeBBHdjdomAIIDyZ12z37qJMNmnZ3voSCYhC</string>
     <string name="role_admin">admin</string>
+    <string name="title_activity_driver_maps">DriverMapsActivity</string>
 </resources>
