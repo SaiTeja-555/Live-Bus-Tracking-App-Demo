@@ -128,7 +128,7 @@ public class RegisterOrLoginActivity extends AppCompatActivity implements View.O
         aSwitch = (Switch) findViewById(R.id.roleSwitch);
         passwordEditText = (EditText) findViewById(R.id.passwordEditText);
         backgroundConstraintLayout = (ConstraintLayout) findViewById(R.id.backgroundConstraintLayout);
-        passangerSwitchTextView = (TextView) findViewById(R.id.rolePassangerTextView);
+        passangerSwitchTextView = (TextView) findViewById(R.id.rolePassengerTextView);
         driverSwitchTextView = (TextView) findViewById(R.id.roleDriverTextView);
         swapSubmitTextView.setOnClickListener(this);
         backgroundConstraintLayout.setOnClickListener(this);

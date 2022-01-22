@@ -13,5 +13,6 @@
     <string name="forgot">forgot password ?</string>
     <string name="signin">Sign up</string>
     <string name="login">Log in</string>
+    <string name="search_hint">Search bus stops...</string>
     <string name="or">- - - - - - -  -  -  -  -  -  -  or  -  -  -  -  -  -  -  - - - - - -</string>
 </resources>

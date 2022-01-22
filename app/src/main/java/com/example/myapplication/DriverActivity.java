@@ -57,6 +57,8 @@ public class DriverActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver);
+        ParseUser.logOut();
+        startActivity(new Intent(DriverActivity.this, RegisterOrLoginActivity.class));
         System.out.println("driver act");
         locationSwitch = (Switch) findViewById(R.id.locationSwitch);
         statusTextView = (TextView) findViewById(R.id.statusTextView);
