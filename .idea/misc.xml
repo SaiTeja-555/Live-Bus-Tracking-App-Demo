@@ -5,9 +5,11 @@
       <map>
         <entry key="app/src/main/res/layout/activity_driver.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_driver_maps.xml" value="0.18" />
+
+        <entry key="app/src/main/res/layout/activity_register_or_login.xml" value="0.264" />
+
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_passanger.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_register_or_login.xml" value="0.33" />
         <entry key="app/src/main/res/menu/main_menu.xml" value="0.16" />
       </map>
     </option>
