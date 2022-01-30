@@ -4,15 +4,44 @@
     <string name="back4app_app_id">TCHXBh26cKQeipZ1lgFwmhu4pztrE4PBHGQAMcps</string>
     <string name="back4app_client_key">INrZGeBBHdjdomAIIDyZ12z37qJMNmnZ3voSCYhC</string>
     <string name="role_admin">admin</string>
+
     <string name="title_activity_driver_maps">DriverMapsActivity</string>
-    <string name="userName">USERNAME</string>
+    <string name="userName">User Name</string>
     <string name="begin">Begin your Journey with..</string>
-    <string name="name">travels</string>
+    <string name="nname">travels</string>
+    <string name="contn">continue</string>
     <string name="password">Password</string>
     <string name="rememberme">Remember me</string>
     <string name="forgot">forgot password ?</string>
-    <string name="signin">Sign up</string>
-    <string name="login">Log in</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="confirmpassword">Confirm Password</string>
+    <string name="createaccount">Create Account</string>
+    <string name="signup">Sign Up</string>
+    <string name="orSignup">or Sign Up</string>
+    <string name="backToLogin">Back To Login</string>
+    <string name="login">Log In</string>
     <string name="search_hint">Search bus stops...</string>
-    <string name="or">- - - - - - -  -  -  -  -  -  -  or  -  -  -  -  -  -  -  - - - - - -</string>
+    <string name="joinus">Join us...</string>
+    <string name="letsride">Let\'s go,</string>
+    <string name="or">or</string>
+    <string name="terms">I have read all the terms and conditions</string>
+
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_dash_board">Dash_Board_Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_passenger_maps">PassengerMapsActivity</string>
+
+    <string name="app_notification_description">Your location is getting updated in Server</string>
+
 </resources>

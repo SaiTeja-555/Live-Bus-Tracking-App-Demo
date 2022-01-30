@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.parse.ParseAnalytics;
 
@@ -36,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("logout","Logging out");
                 ParseUser.logOut();
                 System.out.println(ParseUser.getCurrentUser());
-                startActivity(new Intent(MainActivity.this, RegisterOrLoginActivity.class));
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 return true;
             default:
                 break;
@@ -48,12 +47,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.println("testing");
+        System.out.println("main activity");
+
+        //
+//        ParseUser.logOut();
+//        ParseUser.logInInBackground("driver1", "123");
+//        startActivity(new Intent(this, DriverActivity.class));
+        //
+
 //        ParseInstallation.getCurrentInstallation().saveInBackground();
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
         Intent intent;
         if(ParseUser.getCurrentUser() == null) {
-            intent = new Intent(this, RegisterOrLoginActivity.class);
+            intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }
         else {
@@ -61,8 +67,9 @@ public class MainActivity extends AppCompatActivity {
             if(userRole.equals("admin")) {
                 startActivity(new Intent(this, AdminActivity.class));
             }
-            else if(userRole.equals("passanger")) {
-                startActivity(new Intent(this, PassangerActivity.class));
+            else if(userRole.equals("passenger")) {
+                startActivity(new Intent(this, PassengerActivity.class));
+                System.out.println("pass act done");
             }
             else if(userRole.equals("driver")) {
                 startActivity(new Intent(this, DriverActivity.class));

@@ -3,13 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/booking.xml" value="0.15104166666666666" />
+        <entry key="app/src/main/res/drawable/buslogo.xml" value="0.15104166666666666" />
+        <entry key="app/src/main/res/drawable/button.xml" value="0.15104166666666666" />
+        <entry key="app/src/main/res/drawable/coordinatorlayout.xml" value="0.15104166666666666" />
+        <entry key="app/src/main/res/drawable/curved_button.xml" value="0.15104166666666666" />
+        <entry key="app/src/main/res/drawable/red_solid_circle.xml" value="0.15104166666666666" />
+        <entry key="app/src/main/res/drawable/ring.xml" value="0.15104166666666666" />
+        <entry key="app/src/main/res/drawable/roundedge.xml" value="0.15104166666666666" />
+        <entry key="app/src/main/res/drawable/search_view_customization.xml" value="0.15104166666666666" />
+        <entry key="app/src/main/res/font/annie_use_your_telescope.xml" value="0.16145833333333334" />
+        <entry key="app/src/main/res/font/baloo_bhai.xml" value="0.16145833333333334" />
+        <entry key="app/src/main/res/font/cairo_semibold.xml" value="0.16145833333333334" />
+        <entry key="app/src/main/res/font/mrs_saint_delafield.xml" value="0.16145833333333334" />
+        <entry key="app/src/main/res/font/sunshiney.xml" value="0.16145833333333334" />
         <entry key="app/src/main/res/layout/activity_admin.xml" value="0.13489583333333333" />
+        <entry key="app/src/main/res/layout/activity_create_account.xml" value="0.21467391304347827" />
         <entry key="app/src/main/res/layout/activity_driver.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_driver_maps.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.21920289855072464" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_passanger.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_passenger.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_passenger_maps.xml" value="0.16" />
         <entry key="app/src/main/res/layout/activity_register_or_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_searchable.xml" value="0.13489583333333333" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_tracking.xml" value="0.24003623188405798" />
+        <entry key="app/src/main/res/layout/dashboard_activity.xml" value="0.21965579710144928" />
+        <entry key="app/src/main/res/layout/tracking_path.xml" value="0.24003623188405798" />
+        <entry key="app/src/main/res/layout/tracking_stop_item_view.xml" value="0.25" />
+        <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.13489583333333333" />
         <entry key="app/src/main/res/menu/main_menu.xml" value="0.16" />
         <entry key="app/src/main/res/xml/searchable.xml" value="0.2" />
       </map>

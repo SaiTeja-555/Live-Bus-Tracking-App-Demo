@@ -28,13 +28,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/setLocationButton"
+        android:id="@+id/toggleBusstopsVisibilityButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="48dp"
-        android:onClick="setLocation"
-        android:text="Set Location"
+        android:onClick="toggleBusstopsVisibility"
+        android:text="Bustops"
         app:layout_constraintBottom_toTopOf="@+id/mapCenteringButton"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
