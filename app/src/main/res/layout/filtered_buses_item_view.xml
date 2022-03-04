@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#EAEDEC"
+    tools:context=".FilteredBusesCustomAdaptor">
+    <LinearLayout
+        android:id="@+id/busLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/busLogo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logobusresults" />
+
+        <TextView
+            android:id="@+id/busNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="2dp"
+            android:layout_marginTop="4dp"
+            android:text="TS027256"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/busTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/busLinearLayout"
+        android:background="@drawable/bus_type_custom"
+        android:fontFamily="@font/mclaren"
+        android:padding="5dp"
+        android:text="Express"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/priceTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/busTypeTextView"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/busLinearLayout"
+        android:fontFamily="@font/lemonada_semibold"
+        android:text="Price : "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/busPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/busTypeTextView"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/priceTag"
+        android:fontFamily="@font/lemonada_semibold"
+        android:padding="1dp"
+        android:text="Rs. 800"
+        android:textColor="@color/darkGreen"
+        android:textStyle="bold" />
+
+    <view class="android.widget.TextView"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/busStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:background="@drawable/bus_status_active_custom"
+        android:fontFamily="@font/arvo_bold"
+        android:padding = "2dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingRight="3dp"
+
+        android:paddingBottom="1dp"
+        android:text="inactive"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+
+    <TextView
+        android:id="@+id/arrivalTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/croissant_one"
+        android:padding="3dp"
+        android:text="8:00"
+        android:textColor="@color/darkGreen"
+        android:textStyle="bold" />
+
+    <TextView
+
+        android:id="@+id/departTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/arrivalTimeTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/mclaren"
+        android:padding="3dp"
+        android:text="8:00"
+        android:textColor="@color/darkBlue"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/enterImageView"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_toLeftOf="@+id/arrivalTimeTextView"
+        android:layout_marginEnd="4dp"
+        android:layout_alignTop="@+id/arrivalTimeTextView"
+        android:padding="4dp"
+        app:srcCompat="@drawable/enter" />
+    <ImageView
+        android:id="@+id/exitImageView"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_toLeftOf="@+id/departTimeTextView"
+        android:layout_marginEnd="4dp"
+        android:layout_alignTop="@+id/departTimeTextView"
+        android:padding="4dp"
+        app:srcCompat="@drawable/exit" />
+
+</RelativeLayout>

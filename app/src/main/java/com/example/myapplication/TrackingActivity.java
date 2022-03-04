@@ -3,19 +3,24 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.parse.ParseException;
 import com.parse.ParseObject;
+import com.parse.ParseQuery;
 
 import java.util.List;
 
 public class TrackingActivity extends AppCompatActivity {
 
     List<ParseObject> stops;
+    List<String> busstopNumbers;
+    List<Integer> distancesBtwBustops;
     ListView track;
     ParseObject bus;
     TrackCustomAdaptor trackCustomAdaptor;
@@ -37,22 +42,30 @@ public class TrackingActivity extends AppCompatActivity {
             public void run() {
                 System.out.println("run");
                 //do something
+                ParseQuery busQuery = ParseQuery.getQuery("Bus");
 
+                try {
+                    bus = busQuery.get(bus.getObjectId());
+                    System.out.println(bus.getDouble("distanceCovered"));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
 
-                double distance = bus.getDouble("distanceCovered");
-                int nextBusstopIndex = bus.getInt("nextBusstopIndex");
-
-                if(nextBusstopIndex != currentBusstopIndex) {
-                    System.out.println("reached busstop");
-                    Toast.makeText(getApplicationContext(), "reached "+stops.get(currentBusstopIndex).getString("name"), Toast.LENGTH_SHORT).show();
-                    currentBusstopIndex = nextBusstopIndex;
-                }
-                if(distance >= AppConstants.NEAR_DISTANCE) {
-                    busImageViewLayoutParams.setMargins(0, (int) ((int)distance*AppConstants.TRACK_SCALING), 0, 0);
-                }
-                else {
-                    busImageViewLayoutParams.setMargins(0, 0, 0, 0);
-                }
+                trackCustomAdaptor.checkAndNotifyChanges(bus.getInt("nextBusstopIndex"), bus.getDouble("distanceCovered"));
+//                double distance = bus.getDouble("distanceCovered");
+//                int nextBusstopIndex = bus.getInt("nextBusstopIndex");
+//
+//                if(nextBusstopIndex != currentBusstopIndex) {
+//                    System.out.println("reached busstop");
+//                    Toast.makeText(getApplicationContext(), "reached "+stops.get(currentBusstopIndex).getString("name"), Toast.LENGTH_SHORT).show();
+//                    currentBusstopIndex = nextBusstopIndex;
+//                }
+//                if(distance >= AppConstants.NEAR_DISTANCE) {
+//                    busImageViewLayoutParams.setMargins(0, (int) ((int)distance*AppConstants.TRACK_SCALING), 0, 0);
+//                }
+//                else {
+//                    busImageViewLayoutParams.setMargins(0, 0, 0, 0);
+//                }
 
 
                 busTrackingHandler.postDelayed(busTrackingRunnable, AppConstants.UPDATE_INTERVAL_IN_MILLISECONDS);
@@ -73,15 +86,18 @@ public class TrackingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tracking);
+        System.out.println("tracking activity");
 
-        busImageView = (ImageView) findViewById(R.id.busImageView);
-        busImageViewLayoutParams = (ConstraintLayout.LayoutParams) busImageView.getLayoutParams();
-        bus = PassengerActivity.filteredBuses.get(0);
+        Intent intent = getIntent();
+        int index = intent.getIntExtra("index", -1);
+        bus = FilteredBusesActivity.filteredBuses.get(index);
         currentBusstopIndex = bus.getInt("nextBusstopIndex");
-        stops = ApiService.getAllBusstops(bus);
+        busstopNumbers = ApiService.getOrderedBusstopNumbers(bus);
+        stops = ApiService.getBusstops(busstopNumbers);
+        distancesBtwBustops = ApiService.getDistancesBtwBusstopsBasedOnDirection(bus);
 
         track = (ListView) findViewById(R.id.trackListView);
-        trackCustomAdaptor = new TrackCustomAdaptor(getApplicationContext(), bus, stops);
+        trackCustomAdaptor = new TrackCustomAdaptor(getApplicationContext(), bus, stops, distancesBtwBustops);
         track.setAdapter(trackCustomAdaptor);
     }
 

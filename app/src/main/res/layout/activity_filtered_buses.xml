@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FilteredBusesActivity"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/userFromToLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DDD5E6"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+
+        <TextView
+            android:id="@+id/fromBusstopTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/from_to_text_custom"
+            android:padding="4dp"
+            android:text="userStartingLocation "
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/right_arrow"
+            app:tint="@color/red" />
+
+        <TextView
+            android:id="@+id/toBusstopTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/arrow"
+            android:layout_weight="1"
+            android:background="@drawable/from_to_text_custom"
+            android:padding="4dp"
+            android:text="userDestinationLocation"
+            android:textColor="@color/white"
+
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/listEmptyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="No buses available for the given stops!"
+        android:textColor="@color/grey"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        />
+
+
+    <ListView
+        android:id="@+id/filteredBusesListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userFromToLayout" >
+
+    </ListView>
+
+</RelativeLayout>

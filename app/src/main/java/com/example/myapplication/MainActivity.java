@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.parse.ParseAnalytics;
 
@@ -19,12 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.main_menu, menu);
-
         return super.onCreateOptionsMenu(menu);
-
     }
 
     @Override
@@ -34,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.logoutMenuItem:
                 Log.i("logout","Logging out");
                 ParseUser.logOut();
-                System.out.println(ParseUser.getCurrentUser());
                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 return true;
             default:
@@ -50,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("main activity");
 
         //
-//        ParseUser.logOut();
+//       ParseUser.logOut();
 //        ParseUser.logInInBackground("driver1", "123");
 //        startActivity(new Intent(this, DriverActivity.class));
         //
@@ -69,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
             }
             else if(userRole.equals("passenger")) {
                 startActivity(new Intent(this, PassengerActivity.class));
-                System.out.println("pass act done");
             }
             else if(userRole.equals("driver")) {
                 startActivity(new Intent(this, DriverActivity.class));
@@ -81,8 +77,4 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
-
-
 }

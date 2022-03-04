@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/from_to_text_custom.xml" value="0.15104166666666666" />
         <entry key="app/src/main/res/drawable/booking.xml" value="0.15104166666666666" />
+        <entry key="app/src/main/res/drawable/bus_static_inactive_custom.xml" value="0.15833333333333333" />
+        <entry key="app/src/main/res/drawable/bus_status_custom.xml" value="0.15104166666666666" />
+        <entry key="app/src/main/res/drawable/bus_type_custom.xml" value="0.15104166666666666" />
         <entry key="app/src/main/res/drawable/buslogo.xml" value="0.15104166666666666" />
         <entry key="app/src/main/res/drawable/button.xml" value="0.15104166666666666" />
         <entry key="app/src/main/res/drawable/coordinatorlayout.xml" value="0.15104166666666666" />
@@ -21,6 +25,7 @@
         <entry key="app/src/main/res/layout/activity_create_account.xml" value="0.21467391304347827" />
         <entry key="app/src/main/res/layout/activity_driver.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_driver_maps.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_filtered_buses.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.21920289855072464" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_passanger.xml" value="0.22" />
@@ -31,6 +36,9 @@
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_tracking.xml" value="0.24003623188405798" />
         <entry key="app/src/main/res/layout/dashboard_activity.xml" value="0.21965579710144928" />
+        <entry key="app/src/main/res/layout/filtered_buses_item.xml" value="0.13489583333333333" />
+        <entry key="app/src/main/res/layout/filtered_buses_item_view.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/from_to_text_custom.xml" value="0.13489583333333333" />
         <entry key="app/src/main/res/layout/tracking_path.xml" value="0.24003623188405798" />
         <entry key="app/src/main/res/layout/tracking_stop_item_view.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.13489583333333333" />

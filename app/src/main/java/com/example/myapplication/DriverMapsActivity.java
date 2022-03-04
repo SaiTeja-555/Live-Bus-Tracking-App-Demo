@@ -44,22 +44,19 @@ public class DriverMapsActivity extends AppCompatActivity implements OnMapReadyC
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.main_menu, menu);
-
         return super.onCreateOptionsMenu(menu);
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         super.onOptionsItemSelected(item);
         switch (item.getItemId()) {
-            case R.id.logoutMenuItem:
-                Log.i("logout","Logging out");
-                ParseUser.logOut();
-                System.out.println(ParseUser.getCurrentUser());
-                startActivity(new Intent(DriverMapsActivity.this, LoginActivity.class));
-                return true;
+//            case R.id.logoutMenuItem:
+//                Log.i("logout","Logging out");
+//                ParseUser.logOut();
+//                startActivity(new Intent(DriverMapsActivity.this, LoginActivity.class));
+//                return true;
             case android.R.id.home:
                 System.out.println("going back");
                 finish();
@@ -100,7 +97,6 @@ public class DriverMapsActivity extends AppCompatActivity implements OnMapReadyC
                 busLocation.setLatitude(busGeoPoint.getLatitude());
                 busLocation.setLongitude(busGeoPoint.getLongitude());
                 updateMap(busLocation, isCenteringOn);
-
 
                 busTrackingHandler.postDelayed(busTrackingRunnable, AppConstants.UPDATE_INTERVAL_IN_MILLISECONDS);
             }

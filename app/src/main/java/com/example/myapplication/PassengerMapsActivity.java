@@ -86,6 +86,7 @@ public class PassengerMapsActivity extends AppCompatActivity implements OnMapRea
                     if(mapPurpose.equals("fromSelection") || mapPurpose.equals("toSelection") ||
                             mapPurpose.equals("fromGetLocation") || mapPurpose.equals("toGetLocation")) {
 //                        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+                        System.out.println("perm granted");
                         locationManager.requestSingleUpdate(LocationManager.GPS_PROVIDER, locationListener, null);
 
                     }
@@ -275,19 +276,19 @@ public class PassengerMapsActivity extends AppCompatActivity implements OnMapRea
         if(mapPurpose.equals("fromSelection") || mapPurpose.equals("toSelection")) {
             selectAddress = getLocationAddress(latLng);
             selectLatLng = latLng;
-            if(mapPurpose.equals("fromSelection")) {
-                if(fromLocationMarker != null)
+            if (mapPurpose.equals("fromSelection")) {
+                if (fromLocationMarker != null)
                     fromLocationMarker.remove();
                 fromLocationMarker = mMap.addMarker(new MarkerOptions().position(latLng).title(selectAddress));
-            }
-           else {
-                if(toLocationMarker != null)
+            } else {
+                if (toLocationMarker != null)
                     toLocationMarker.remove();
                 toLocationMarker = mMap.addMarker(new MarkerOptions().position(latLng).title(selectAddress));
             }
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
+
+            if (setLocationButton.getVisibility() == View.INVISIBLE)
+                setLocationButton.setVisibility(View.VISIBLE);
         }
-        if(setLocationButton.getVisibility() == View.INVISIBLE)
-            setLocationButton.setVisibility(View.VISIBLE);
     }
 }

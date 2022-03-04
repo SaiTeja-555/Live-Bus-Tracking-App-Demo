@@ -35,8 +35,8 @@ public class PassengerActivity extends AppCompatActivity implements View.OnClick
     static LatLng fromLatLng = null;
     static String toAddress = "";
     static LatLng toLatLng = null;
-    ParseObject fromBusstop = null;
-    ParseObject toBusstop = null;
+    static ParseObject fromBusstop = null;
+    static ParseObject toBusstop = null;
 
     Button fromLocateOnMapButton;
     Button toLocateOnMapButton;
@@ -51,12 +51,11 @@ public class PassengerActivity extends AppCompatActivity implements View.OnClick
     ListView toSearchListView;
     SearchView fromSearchView;
     SearchView toSearchView;
-    TextView fromAddrTextView;
-    TextView toAddrTextView;
+//    TextView fromAddrTextView;
+//    TextView toAddrTextView;
     Button goButton;
-    Group visibilityToggleGroup;
 
-    static List<ParseObject> filteredBuses = null;
+    List<ParseObject> filteredBuses = null;
 
 
     @Override
@@ -75,7 +74,6 @@ public class PassengerActivity extends AppCompatActivity implements View.OnClick
             case R.id.logoutMenuItem:
                 Log.i("logout","Logging out");
                 ParseUser.logOut();
-                System.out.println(ParseUser.getCurrentUser());
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 return true;
             default:
@@ -94,78 +92,62 @@ public class PassengerActivity extends AppCompatActivity implements View.OnClick
         toLocateOnMapButton = (Button) findViewById(R.id.toLocateOnMapButton);
         fromSelectYourLocationButton = (Button) findViewById(R.id.fromSelectYourLocationButton);
         toSelectYourLocationButton = (Button) findViewById(R.id.toSelectYourLocationButton);
-//        passengerConstraintLayout = (ConstraintLayout) findViewById(R.id.passengerConstraintLayout);
         bgLinearLayout = (LinearLayout) findViewById(R.id.bgLinearLayout);
         fromSearchListView = (ListView) findViewById(R.id.fromSearchListView);
         toSearchListView = (ListView) findViewById(R.id.toSearchListView);
         fromSearchView = (SearchView) findViewById(R.id.fromSearchView);
         toSearchView = (SearchView) findViewById(R.id.toSearchView);
-//        fromAddrTextView = (TextView) findViewById(R.id.fromAddrTextView);
-//        toAddrTextView = (TextView) findViewById(R.id.toAddrTextView);
         goButton = (Button) findViewById(R.id.goButton);
-//        visibilityToggleGroup = (Group) findViewById(R.id.group);
-
-//        passengerConstraintLayout.setOnClickListener(this);
         bgLinearLayout.setOnClickListener(this);
         fromSearchView.setOnClickListener(this);
         toSearchView.setOnClickListener(this);
 
-//        if(visibilityToggleGroup.getVisibility() == View.INVISIBLE)
-//            visibilityToggleGroup.setVisibility(View.VISIBLE);
-
-
-//        if(fromAddress.equals(""))
-//            fromAddrTextView.setText("Unselected...");
-//        else
-//            fromAddrTextView.setText(fromAddress);
-//        if(toAddress.equals(""))
-//            toAddrTextView.setText("Unselected...");
-//        else
-//            toAddrTextView.setText(toAddress);
-        Log.i("from addr",fromAddress);
-        Log.i("to addr",toAddress);
-//        Log.i("fromLoc",fromLatLng);
-//        Log.i("toLoc",toLatLng.toString());
         fromLocateOnMapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PassengerMapsActivity.class);
-                intent.putExtra("purpose","fromSelection");
-                startActivity(intent);
+                ApiService.futureFeature();
+//                Intent intent = new Intent(getApplicationContext(), PassengerMapsActivity.class);
+//                intent.putExtra("purpose","fromSelection");
+//                startActivity(intent);
             }
         });
         toLocateOnMapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PassengerMapsActivity.class);
-                intent.putExtra("purpose","toSelection");
-                startActivity(intent);
+                ApiService.futureFeature();
+//                Intent intent = new Intent(getApplicationContext(), PassengerMapsActivity.class);
+//                intent.putExtra("purpose","toSelection");
+//                startActivity(intent);
             }
         });
         fromSelectYourLocationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PassengerMapsActivity.class);
-                intent.putExtra("purpose","fromGetLocation");
-                startActivity(intent);
+                ApiService.futureFeature();
+//                Intent intent = new Intent(getApplicationContext(), PassengerMapsActivity.class);
+//                intent.putExtra("purpose","fromGetLocation");
+//                startActivity(intent);
             }
         });
         toSelectYourLocationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PassengerMapsActivity.class);
-                intent.putExtra("purpose","toGetLocation");
-                startActivity(intent);
+                ApiService.futureFeature();
+//                Intent intent = new Intent(getApplicationContext(), PassengerMapsActivity.class);
+//                intent.putExtra("purpose","toGetLocation");
+//                startActivity(intent);
             }
         });
 
         busstopSearchResults = new ArrayList<String>();
         allBusstops = ApiService.getAllBusstops(null);
         if(allBusstops != null) {
-            System.out.println("busstops is not null");
             for (ParseObject busstop : allBusstops) {
                 busstopSearchResults.add(busstop.getString("name"));
             }
+        }
+        else {
+            System.out.println("busstops is null");
         }
         searchArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, busstopSearchResults);
         fromSearchListView.setAdapter(searchArrayAdapter);
@@ -173,7 +155,6 @@ public class PassengerActivity extends AppCompatActivity implements View.OnClick
 
         fromSearchListView.setVisibility(View.GONE);
         toSearchListView.setVisibility(View.GONE);
-
 
         fromSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -229,11 +210,10 @@ public class PassengerActivity extends AppCompatActivity implements View.OnClick
             public void onItemClick(AdapterView<?> parent, View view, int pos, long l) {
                 System.out.println(busstopSearchResults.indexOf(searchArrayAdapter.getItemId(pos)));
                 fromBusstop = allBusstops.get(busstopSearchResults.indexOf(searchArrayAdapter.getItem(pos)));
-//                fromAddrTextView.setText(fromBusstop.getString("name"));
                 fromSearchView.setQuery(fromBusstop.getString("name"), false);
                 fromSearchListView.setVisibility(View.GONE);
 //                fromSearchView.onActionViewCollapsed();
-//searchArrayAdapter.
+
             }
         });
 
@@ -242,11 +222,9 @@ public class PassengerActivity extends AppCompatActivity implements View.OnClick
             public void onItemClick(AdapterView<?> parent, View view, int pos, long l) {
                 System.out.println(busstopSearchResults.indexOf(searchArrayAdapter.getItem(pos)));
                 toBusstop = allBusstops.get(busstopSearchResults.indexOf(searchArrayAdapter.getItem(pos)));
-//                toAddrTextView.setText(toBusstop.getString("name"));
                 toSearchView.setQuery(toBusstop.getString("name"), false);
                 toSearchListView.setVisibility(View.GONE);
 //                toSearchView.onActionViewCollapsed();
-
             }
         });
 
@@ -254,14 +232,16 @@ public class PassengerActivity extends AppCompatActivity implements View.OnClick
             @Override
             public void onClick(View view) {
                 if(fromBusstop != null && toBusstop != null ) {
-                    filteredBuses = ApiService.getFilteredBuses(fromBusstop, toBusstop);
-                    System.out.println(filteredBuses);
-                    if(filteredBuses != null && filteredBuses.size() > 0) {
-                        startActivity(new Intent(getApplicationContext(), TrackingActivity.class));
-                    }
-                    else {
-                        Toast.makeText(getApplicationContext(), "No buses available", Toast.LENGTH_SHORT).show();
-                    }
+                    Intent intent = new Intent(getApplicationContext(),FilteredBusesActivity.class);
+                    startActivity(intent);
+//                    filteredBuses = ApiService.getFilteredBuses(fromBusstop, toBusstop);
+//                    System.out.println(filteredBuses);
+//                    if(filteredBuses != null && filteredBuses.size() > 0) {
+//                        startActivity(new Intent(getApplicationContext(), TrackingActivity.class));
+//                    }
+//                    else {
+//                        Toast.makeText(getApplicationContext(), "No buses available", Toast.LENGTH_SHORT).show();
+//                    }
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "from bustop and to bustop must be selected", Toast.LENGTH_SHORT).show();
@@ -279,6 +259,13 @@ public class PassengerActivity extends AppCompatActivity implements View.OnClick
                 imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
             }
         }
+        else if(view.getId() == R.id.fromSearchView) {
+            fromSearchView.setIconified(false);
+        }
+        else if(view.getId() == R.id.toSearchView) {
+            toSearchView.setIconified(false);
+        }
     }
+
 
 }
